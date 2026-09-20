@@ -1,5 +1,9 @@
 # AIMS LaTeX Template
 
+Este repositório reúne os arquivos do template LaTeX do grupo AIMS para projetos de pesquisa, com opções de capas, idiomas e formatação. O modelo está disponível no Overleaf para cópia e uso pelos alunos.
+
+This repository contains the AIMS group’s LaTeX research proposal template, with cover, language, and formatting options. Students can copy the template on Overleaf and start writing.
+
 ## Português
 
 - **[Abra o template no Overleaf](https://www.overleaf.com/read/nscgmwczdwcg#e84242)**, selecione **Copy Project** e comece sua escrita.
