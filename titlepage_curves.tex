@@ -1,0 +1,183 @@
+% COVER A: FLOWING CURVES -- PUBLIC DEFAULT
+% Lower logos always use the bottom-left corner.
+% All logo widths enlarged by 25 percent.
+% Include from main.tex; do not compile alone.
+% Uses shared project fields from main.tex.
+% Keep all cover formatting inside titlepage.
+
+\begin{titlepage}
+  \thispagestyle{empty}
+  \singlespacing
+  \begin{tikzpicture}[remember picture,overlay]
+    \draw[feecPurple,line width=12pt,opacity=0.30]
+      ([xshift=-5cm]current page.north)
+      to[out=-70,in=140] ([yshift=6cm]current page.east);
+    \draw[feecLavender,line width=7pt,opacity=0.50]
+      ([xshift=-4cm]current page.north)
+      to[out=-70,in=140] ([yshift=5cm]current page.east);
+    \draw[feecNavy,line width=10pt,opacity=0.25]
+      ([xshift=5cm]current page.south)
+      to[out=100,in=-30] ([yshift=-5cm]current page.west);
+    \draw[feecGreen,line width=6pt,opacity=0.40]
+      ([xshift=4cm]current page.south)
+      to[out=100,in=-30] ([yshift=-4cm]current page.west);
+
+    \node at (current page.center)
+      [text width=0.76\paperwidth,
+       align=center,inner sep=0pt] {%
+      \begin{minipage}{0.76\paperwidth}
+        \centering
+        \setlength{\parskip}{0pt}
+        \setlength{\parindent}{0pt}
+        {\color{feecNavy}\fontsize{25}{31}%
+          \selectfont\bfseries
+          \projectTitle\par}
+        \vspace{0.7cm}
+        {\color{feecDarkBlue}\fontsize{16}{21}%
+          \selectfont
+          \subprojectTitle\par}
+        \vspace{1cm}
+        {\color{feecDarkBlue}\fontsize{14}{19}%
+          \selectfont
+          \docsubtitle\par}
+        \vspace{2cm}
+        {\fontsize{13}{18}\selectfont
+          \applicantName\par}
+        \vspace{0.5cm}
+        {\fontsize{12}{16}\selectfont
+          Lead researcher: \leadResearcher\par}
+        \vspace{1cm}
+        {\color{black!70}\fontsize{12}{16}%
+          \selectfont
+          \hostInstitution\par
+          \hostDepartment\par}
+        \vspace{0.7cm}
+        {\color{black!70}\fontsize{12}{16}%
+          \selectfont
+          \projectCity, \docdate\par}
+      \end{minipage}};
+    % LOGO ARRANGEMENTS
+    % Keep ONE complete block active.
+    % Comment its nodes before enabling another.
+    % Widths preserve each image aspect ratio.
+    % Keep files in the shared logos/ folder.
+    % Always include UNICAMP, FEEC and AIMS files.
+    % Partner options need extra logo files.
+
+    % DEFAULT: INSTITUTIONS + PARTNER PLACEHOLDER
+    % UNICAMP, FEEC and AIMS remain visible.
+    % Only the partner/project logo changes.
+    % Replace logo-placeholder.png with your logo,
+    % or activate one of the partner blocks below.
+    % Keep ONE complete configuration active.
+    \node[anchor=north east,inner sep=0pt]
+      at ([xshift=-1.5cm,yshift=-1.5cm]
+        current page.north east) {%
+      \raisebox{-0.5\height}{%
+        \includegraphics[width=2.375cm]
+          {logos/logo-unicamp.png}}%
+      \hspace{0.65cm}%
+      \raisebox{-0.5\height}{%
+        \includegraphics[width=3.75cm]
+          {logos/logo-placeholder.png}}%
+    };
+    \node[anchor=south west,inner sep=0pt]
+      at ([xshift=1.5cm,yshift=1.3cm]
+        current page.south west) {%
+      \raisebox{-0.5\height}{%
+        \includegraphics[width=4.125cm]
+          {logos/logo-feec.png}}%
+      \hspace{0.65cm}%
+      \raisebox{-0.5\height}{%
+        \includegraphics[width=3.125cm]
+          {logos/logo-aims-branco-texto.png}}%
+    };
+
+    % A: INSPIRE / CPQD
+    % Add the named images to logos/ first.
+    % Uncomment both nodes to use this option.
+    % \node[anchor=north east,inner sep=0pt]
+    %   at ([xshift=-1.5cm,yshift=-1.5cm]
+    %     current page.north east) {%
+    %   \raisebox{-0.5\height}{%
+    %     \includegraphics[width=2.375cm]
+    %       {logos/logo-unicamp.png}}%
+    %   \hspace{0.65cm}%
+    %   \raisebox{-0.5\height}{%
+    %     \includegraphics[width=3.75cm]
+    %       {logos/logo-cpqd.png}}%
+    % };
+    % \node[anchor=south west,inner sep=0pt]
+    %   at ([xshift=1.5cm,yshift=1.3cm]
+    %     current page.south west) {%
+    %   \raisebox{-0.5\height}{%
+    %     \includegraphics[width=4.125cm]
+    %       {logos/logo-feec.png}}%
+    %   \hspace{0.65cm}%
+    %   \raisebox{-0.5\height}{%
+    %     \includegraphics[width=3.125cm]
+    %       {logos/logo-aims-branco-texto.png}}%
+    % };
+
+    % B: BI0S
+    % Uncomment all nodes in this block.
+    % \node[anchor=north east,inner sep=0pt]
+    %   at ([xshift=-1.5cm,yshift=-1.5cm]
+    %     current page.north east) {%
+    %   \raisebox{-0.5\height}{%
+    %     \includegraphics[width=2.375cm]
+    %       {logos/logo-unicamp.png}}%
+    %   \hspace{0.65cm}%
+    %   \raisebox{-0.5\height}{%
+    %     \includegraphics[width=3.75cm]
+    %       {logos/logo-bi0s.png}}%
+    % };
+    % \node[anchor=south west,inner sep=0pt]
+    %   at ([xshift=1.5cm,yshift=1.3cm]
+    %     current page.south west) {%
+    %   \raisebox{-0.5\height}{%
+    %     \includegraphics[width=4.125cm]
+    %       {logos/logo-feec.png}}%
+    %   \hspace{0.65cm}%
+    %   \raisebox{-0.5\height}{%
+    %     \includegraphics[width=3.125cm]
+    %       {logos/logo-aims-branco-texto.png}}%
+    % };
+
+    % C: BI0S + CEB
+    % Uncomment all nodes in this block.
+    % Three unit/group logos share the lower row.
+    % \node[anchor=north east,inner sep=0pt]
+    %   at ([xshift=-1.5cm,yshift=-1.5cm]
+    %     current page.north east) {%
+    %   \raisebox{-0.5\height}{%
+    %     \includegraphics[width=2.375cm]
+    %       {logos/logo-unicamp.png}}%
+    %   \hspace{0.65cm}%
+    %   \raisebox{-0.5\height}{%
+    %     \includegraphics[width=3.75cm]
+    %       {logos/logo-bi0s.png}}%
+    % };
+    % \node[anchor=south west,inner sep=0pt]
+    %   at ([xshift=1.5cm,yshift=1.3cm]
+    %     current page.south west) {%
+    %   \raisebox{-0.5\height}{%
+    %     \includegraphics[width=4.125cm]
+    %       {logos/logo-feec.png}}%
+    %   \hspace{0.65cm}%
+    %   \raisebox{-0.5\height}{%
+    %     \includegraphics[width=3.125cm]
+    %       {logos/logo-aims-branco-texto.png}}%
+    %   \hspace{0.65cm}%
+    %   \raisebox{-0.5\height}{%
+    %     \includegraphics[width=2.75cm]
+    %       {logos/logo-ceb.png}}%
+    % };
+
+    % FUTURE PARTNERS
+    % Copy a block and update names/positions.
+    % Use one width per logo; do not force height.
+
+  \end{tikzpicture}
+\end{titlepage}
+

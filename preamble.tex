@@ -1,0 +1,162 @@
+% ENGLISH TEMPLATE: BIBLIOGRAPHY FIX
+% PREAMBLE
+% Compile main.tex with XeLaTeX.
+% Keep one option active in each settings group.
+
+% LANGUAGE
+% English (default):
+\usepackage[brazilian,english]{babel}
+% Brazilian Portuguese (replace the line above):
+% \usepackage[english,brazilian]{babel}
+%
+% The last language is the main language.
+% Babel sets hyphenation and automatic labels.
+% Translate your own headings and text manually.
+% For a short passage in another language:
+% \foreignlanguage{brazilian}{Portuguese text}
+% For a longer passage:
+% \begin{otherlanguage}{brazilian}
+% [Your Portuguese text here.]
+% \end{otherlanguage}
+
+% FONT
+\usepackage{fontspec}
+\setmainfont{Linux Libertine O}
+% Use XeLaTeX, not pdfLaTeX.
+% Do not load inputenc or fontenc here.
+
+% MARGINS
+% These are template design choices.
+\usepackage[
+  a4paper,
+  margin=2.5cm,
+  headheight=15pt,
+  footskip=1.2cm
+]{geometry}
+
+% LINE SPACING
+\usepackage{setspace}
+% FAPESP scholarship projects: double spacing.
+\doublespacing
+% General use: replace the line above with:
+% \onehalfspacing
+% Or, for single spacing:
+% \singlespacing
+%
+% Check the rules for your specific funding call.
+% This setting is not universal FAPESP compliance.
+% General scholarship guidance:
+% https://fapesp.br/253/projeto-de-pesquisa
+% Body size: 12 pt, set in main.tex.
+% Cover pages use local single spacing.
+
+% PARAGRAPHS
+% Indented, with no extra space between paragraphs:
+\usepackage{indentfirst}
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+% Alternative: replace the two settings above.
+% \setlength{\parindent}{0pt}
+% \setlength{\parskip}{0.6em}
+
+% GRAPHICS AND COVER COLORS
+\usepackage{graphicx}
+\graphicspath{{logos/}{fig/}}
+\usepackage[table,svgnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{
+  calc,intersections,decorations.text
+}
+\definecolor{feecDarkBlue}{HTML}{00427A}
+\definecolor{feecNavy}{HTML}{102B4E}
+\definecolor{feecPurple}{HTML}{562877}
+\definecolor{feecGreen}{HTML}{B0D361}
+\definecolor{feecLavender}{HTML}{EACCFF}
+% Color names are inherited from the original cover.
+
+% COVER B COLORS
+% Original attachment omitted these definitions.
+% These editable defaults match the shared palette.
+\definecolor{aimsBlue}{HTML}{00427A}
+\definecolor{aimsYellow}{HTML}{F2C94C}
+\definecolor{aimsTeal}{HTML}{238A8D}
+
+% FUTURE COVERS
+% Add new named colors and TikZ libraries here.
+% Put each design in its own titlepage_*.tex file.
+% Do not change global fonts/spacing for one cover.
+
+% TABLES, FIGURES AND MATHEMATICS
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\captionsetup{font=small,labelfont=bf}
+\renewcommand{\arraystretch}{1.2}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+
+% LINKS
+% Load BEFORE abntex2cite.
+% abntex2cite detects hyperref when it loads.
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=feecDarkBlue,
+  citecolor=feecDarkBlue,
+  urlcolor=feecDarkBlue
+}
+
+% ABNT AUTHOR-DATE CITATIONS
+% Keep this package for either document language.
+% It provides native \citeonline support.
+\usepackage[alf]{abntex2cite}
+% Do not also load cite, natbib or biblatex.
+% The package selects abntex2-alf automatically.
+% Do not add another \bibliographystyle command.
+%
+% Replace 'key' with a real entry from your .bib:
+% According to \citeonline{key}, ...
+% ... \cite{key}.
+% \citeonline[p.~25]{key}
+% \cite[p.~25]{key}
+% \cite{key1,key2}
+%
+% Enable the bibliography at the end of main.tex.
+% Use BibTeX, not Biber.
+% Local compilation sequence:
+% 1. xelatex main
+% 2. bibtex main
+% 3. xelatex main
+% 4. xelatex main
+% Overleaf runs these steps automatically.
+%
+% After switching from biblatex/Biber, use:
+% Recompile from scratch.
+% This clears incompatible .aux and .bbl files.
+% The package uses the traditional abnTeX2 style.
+% Later ABNT revisions are not applied automatically.
+
+% FOOTER
+% Language-neutral page numbering.
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyfoot[R]{%
+  \small\color{black!70}%
+  \thepage\ / \pageref{LastPage}}
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0.4pt}
+  \fancyfoot[R]{%
+    \small\color{black!70}%
+    \thepage\ / \pageref{LastPage}}}

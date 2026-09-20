@@ -1,0 +1,236 @@
+% ENGLISH TEMPLATE: FIGURE AND CITATION EXAMPLES
+% !TeX program = xelatex
+% GENERIC RESEARCH PROJECT TEMPLATE
+% Overleaf: main.tex + XeLaTeX.
+% Keep all four .tex files in the same folder.
+% Add a logos/ subfolder for partner images.
+% Each cover has editable logo blocks A, B and C.
+% INSPIRE is active; BI0S alternatives are commented.
+% Settings: see preamble.tex.
+% After migrating from biblatex, use
+% Recompile from scratch.
+\documentclass[a4paper,12pt]{article}
+\input{preamble.tex}
+
+% PROJECT DETAILS
+% Replace these values for each new project.
+% Edit the fields below for each new project.
+
+\newcommand{\projectTitle}{Research Project Title}
+\newcommand{\subprojectTitle}{%
+  Project subtitle or brief description}
+\newcommand{\docsubtitle}{Research Project}
+\newcommand{\applicantName}{Applicant name}
+\newcommand{\leadResearcher}{%
+  Lead researcher name}
+\newcommand{\hostInstitution}{Host institution name}
+\newcommand{\hostDepartment}{School or department name}
+\newcommand{\fundingAgency}{%
+  Funding agency or program name}
+\newcommand{\grantNumber}{%
+  To be completed, if applicable}
+\newcommand{\projectPeriod}{Month/year to month/year}
+\newcommand{\docdate}{Month year}
+\newcommand{\projectCity}{City}
+% For Portuguese, change babel in preamble.tex.
+% Translate these values and your headings manually.
+\hypersetup{
+  pdftitle={\projectTitle},
+  pdfauthor={\applicantName}
+}
+
+\begin{document}
+
+% COVER GALLERY
+% Both covers are active for comparison.
+% Keep ONE input line for the final document.
+% Delete or comment out the unwanted input line.
+\input{titlepage_curves.tex}
+\input{titlepage_arcs.tex}
+
+% ADD MORE COVER DESIGNS HERE
+% 1. Copy a cover into titlepage_new.tex.
+% 2. Keep one titlepage environment in that file.
+% 3. Reuse the project fields defined above.
+% 4. Keep font and spacing changes local.
+% 5. Add any packages/colors to preamble.tex.
+% 6. Uncomment its input below to preview it.
+% \input{titlepage_new.tex}
+
+% The information sheet below is independent.
+% Keep or remove it according to your needs.
+
+% PROJECT INFORMATION
+% Remove rows that do not apply.
+\begin{titlepage}
+  \thispagestyle{empty}
+  \singlespacing
+  \vspace*{1.5cm}
+  \begin{center}
+    {\color{feecNavy}\Large\bfseries
+      Project Information\par}
+    \vspace{1.4cm}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabularx}{0.95\linewidth}{@{}
+      >{\raggedright\arraybackslash\bfseries}
+      p{0.30\linewidth}X@{}}
+      Title: & \projectTitle \\
+      Document: & \docsubtitle \\
+      Applicant: & \applicantName \\
+      Lead researcher: & \leadResearcher \\
+      Host institution: & \hostInstitution \\
+      Unit: & \hostDepartment \\
+      Funding: & \fundingAgency \\
+      Process: & \grantNumber \\
+      Period: & \projectPeriod \\
+      Date: & \docdate \\
+    \end{tabularx}
+  \end{center}
+  \vfill
+  \begin{center}
+    \projectCity\par
+    \docdate
+  \end{center}
+\end{titlepage}
+
+% MAIN TEXT
+% Numbering restarts here. This does not exempt
+% the cover pages from a funding body's page limit.
+\pagenumbering{arabic}
+\pagestyle{fancy}
+
+% ABSTRACT: centered on its own page.
+% General FAPESP scholarship limit: 20 lines.
+\clearpage
+\thispagestyle{empty}
+\null
+\vfill
+\begin{abstract}
+[Summarize the problem, objectives, methods, and
+expected results.]
+\end{abstract}
+\vfill
+\null
+\clearpage
+
+% OPTIONAL CONTENTS PAGE
+% \tableofcontents
+% \clearpage
+
+\section{Introduction and Motivation}
+[Present the research problem, its relevance, and the
+key literature.]
+
+\subsection{Background}
+[Introduce the concepts and context needed to
+understand the problem.]
+
+\subsection{Research Gap}
+[Identify the limitations of existing work and the
+intended contribution.]
+
+% OPTIONAL RESEARCH CENTER AFFILIATION
+% \subsection{Research Center Affiliation}
+% [Explain the alignment and contributions.]
+
+\section{Objectives}
+[State the main objective and the specific objectives.]
+
+\section{Materials and Methods}
+[Describe the research design, materials, data, and
+procedures.]
+
+\subsection{Resources and Infrastructure}
+[Describe the available resources and additional
+requirements.]
+
+\subsection{Research Procedures}
+[Describe the research steps and methods, including
+ethical considerations.]
+
+\subsection{Analysis of Results}
+[Define metrics, evaluation criteria, and analysis
+procedures.]
+
+\section{Work Plan and Schedule}
+[List the activities, milestones, deliverables, and
+deadlines.]
+
+\section{Expected Results}
+[Describe the expected scientific contributions and
+outputs.]
+
+% TEACHING EXAMPLES
+% Remove this section before submitting a project.
+% Keep your own images in fig/ and logos in logos/.
+\section{Template Examples: Figures and Citations}
+
+\subsection{An intentionally fictional reference}
+% First citation and first entry in references.bib.
+% The author name also places it first alphabetically.
+The first example is deliberately fictional:
+\citeonline{aardvark2026fictional} wrote
+\emph{This Reference Does Not Exist: Cite It and Your
+Career May Become Fiction Too}. Neither the author
+nor the book is real. This template Easter egg is a
+reminder to verify every reference, especially those
+suggested by an AI tool. Remove this paragraph and
+the fictional entry before submitting your work.
+
+\subsection{Academic writing and research habits}
+% Narrative citation: author is part of the sentence.
+\citeonline{booth2024craft} discuss research questions,
+evidence, and the construction of arguments.
+\citeonline{belcher2019writing} provides a structured
+workbook for developing a journal article.
+% Parenthetical citation: author/year in parentheses.
+A regular writing schedule is also a useful topic
+for graduate researchers to explore
+\cite{silvia2018write}.
+
+\subsection{Organizing graduate research}
+\citeonline{allen2015getting} presents an approach to
+organizing commitments and next actions, while
+\citeonline{newport2016deep} discusses protecting time
+for demanding, focused work. These general-purpose
+books can inform a graduate student's work habits;
+they are not substitutes for a research methodology
+or a guarantee of productivity.
+
+\subsection{Including and referencing a figure}
+Figure~\ref{fig:ml-research-lifecycle} presents the
+\emph{Machine Learning Research Lifecycle}, a teaching
+framework for academic research. It connects research
+questions, study design, model development, evaluation,
+publication, and follow-up research. Inspired by the
+iterative approach of CRISP-ML(Q)
+\cite{studer2021crisp}, it emphasizes scientific
+contributions rather than business deployment.
+This is a new educational adaptation, not an
+established standard or a figure from the cited paper.
+
+% Store research images in fig/.
+% Set width only to preserve the aspect ratio.
+% Keep the label after the caption.
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]
+    {fig/ml_research_lifecycle.png}
+  \caption{Machine Learning Research Lifecycle.
+    Original educational diagram created for this
+    template, inspired by CRISP-ML(Q)
+    \cite{studer2021crisp} and adapted to academic
+    research. The stages are iterative; test data
+    must remain independent of model selection.}
+  \label{fig:ml-research-lifecycle}
+\end{figure}
+
+% BIBLIOGRAPHY
+% Uses abntex2cite from the existing preamble.
+% BibTeX reads references.bib (no extension here).
+% Only cited entries are printed.
+% If switching from biblatex, recompile from scratch.
+\clearpage
+\bibliography{references}
+
+\end{document}
